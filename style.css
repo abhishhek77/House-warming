@@ -1,0 +1,37 @@
+:root{
+  --bg:#f3e6c8; --card:#fffaf0; --ink:#4a1d12; --muted:#7a5a46;
+  --gold:#b8860b; --gold2:#e0b84c; --accent:#8c1c13; --leaf:#2f5d34;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#1d0f0a; --card:#2a1710; --ink:#f6e7c6; --muted:#d3b78f;
+    --gold:#e0b84c; --gold2:#f2d27a; --accent:#f08a6a; --leaf:#8fc08f;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Lato',system-ui,sans-serif;
+  display:flex;justify-content:center;padding:28px 16px;min-height:100vh}
+.card{width:100%;max-width:520px;background:var(--card);text-align:center;
+  padding:38px 26px 34px;position:relative;
+  border:10px solid transparent;
+  border-image:repeating-linear-gradient(90deg,var(--gold) 0 10px,var(--card) 10px 14px,var(--gold2) 14px 24px,var(--card) 24px 28px) 10;
+  box-shadow:0 10px 40px rgba(74,29,18,.18)}
+.lamp{width:78px;height:auto;color:var(--gold);margin:0 auto 6px;display:block}
+.om{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;color:var(--muted);font-size:1rem;letter-spacing:.08em}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:clamp(2.2rem,9vw,3rem);
+  line-height:1.05;margin:10px 0 4px;color:var(--accent)}
+.sub{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.25rem;color:var(--leaf);margin:0 0 20px}
+.divider{height:14px;margin:18px auto;max-width:240px;
+  background:radial-gradient(circle,var(--gold) 3px,transparent 4px) center/18px 14px repeat-x}
+p{line-height:1.65;margin:0 0 14px;font-size:1.02rem}
+.host{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-weight:700}
+.details{display:grid;gap:12px;margin:22px 0 6px;text-align:left}
+.row{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;
+  border:1px solid var(--gold);border-radius:10px}
+.ic{font-size:1.5rem;line-height:1}
+.lbl{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.val{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-weight:700;line-height:1.25}
+.small{font-size:.92rem;color:var(--muted);font-family:'Lato',sans-serif;font-weight:400}
+.foot{margin-top:22px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.2rem;color:var(--leaf)}
